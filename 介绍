@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关冬意的智能运维项目</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .accordion-content { display: none; }
+    .accordion-button.active + .accordion-content { display: block; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <header class="bg-blue-600 text-white py-6">
+    <div class="container mx-auto text-center">
+      <h1 class="text-3xl font-bold">关冬意的智能自动化运维平台实践</h1>
+      <p class="mt-2 text-blue-200">基于 AIOps 与基础设施即代码的高可用 Linux 集群</p>
+    </div>
+  </header>
+
+  <main class="container mx-auto my-10 px-4">
+
+    <!-- 项目概览 -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">项目概述</h2>
+      <p>
+        本项目基于 OpenEuler 搭建企业级高可用 Linux 集群，结合 AIOps 与基础设施即代码（IaC）理念，实现智能自动化运维。
+        通过多层可观测性系统与 AI 智能体，实现日志异常检测、指标预测及故障自愈，显著提升运维效率与系统可靠性。
+      </p>
+    </section>
+
+    <!-- 技术栈 -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">技术栈</h2>
+      <ul class="list-disc list-inside">
+        <li>操作系统与集群：OpenEuler / CentOS</li>
+        <li>高可用架构：Nginx + LVS DR + Keepalived</li>
+        <li>自动化运维：Ansible Playbook, SaltStack</li>
+        <li>监控与可观测性：Zabbix, Prometheus</li>
+        <li>智能运维：A-OPS 平台 + AI Agent / LLM</li>
+        <li>脚本与自动化：Python, Shell</li>
+        <li>版本管理与 CI/CD：Git</li>
+      </ul>
+    </section>
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-4">核心亮点</h2>
+
+      <div>
+        <button class="accordion-button w-full text-left py-2 px-4 bg-gray-200 rounded mb-1 font-medium">高可用架构落地</button>
+        <div class="accordion-content p-4 bg-gray-50 rounded mb-2">
+          搭建 Nginx + LVS + Keepalived 高可用负载均衡集群，利用 VRRP 协议实现核心业务单点故障平滑切换。
+        </div>
+
+        <button class="accordion-button w-full text-left py-2 px-4 bg-gray-200 rounded mb-1 font-medium">基础设施即代码（IaC）</button>
+        <div class="accordion-content p-4 bg-gray-50 rounded mb-2">
+          编写 Ansible Playbook 与 SaltStack 状态文件，支持多节点批量配置与无损滚动重启。
+        </div>
+
+        <button class="accordion-button w-full text-left py-2 px-4 bg-gray-200 rounded mb-1 font-medium">多维可观测性与告警</button>
+        <div class="accordion-content p-4 bg-gray-50 rounded mb-2">
+          构建 Zabbix/Prometheus 多层监控体系，自定义系统级与应用级指标，并设计告警抑制策略。
+        </div>
+
+        <button class="accordion-button w-full text-left py-2 px-4 bg-gray-200 rounded mb-1 font-medium">智能运维与自愈能力</button>
+        <div class="accordion-content p-4 bg-gray-50 rounded mb-2">
+          AI Agent 实现日志异常检测与闭环自愈，Python/Shell 脚本对接告警策略，实现故障自动修复和回滚。
+        </div>
+
+        <button class="accordion-button w-full text-left py-2 px-4 bg-gray-200 rounded mb-1 font-medium">网络与安全策略</button>
+        <div class="accordion-content p-4 bg-gray-50 rounded mb-2">
+          深入理解 TCP/IP、DNS/HTTP 协议，熟悉 SELinux 与防火墙策略，实现安全隔离。
+        </div>
+      </div>
+    </section>
+
+    <!-- 成果与考核 -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">成果与考核</h2>
+      <ul class="list-disc list-inside">
+        <li>实训成绩：96分（高难度考核）</li>
+        <li>成功搭建高可用集群，实现批量自动化部署</li>
+        <li>多层监控与 AI 智能体闭环自愈显著提升运维效率</li>
+      </ul>
+    </section>
+
+    <!-- GitHub 链接 -->
+    <section class="mt-8 text-center">
+      <a href="https://github.com/dongyimay" class="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">访问我的 GitHub</a>
+    </section>
+
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.accordion-button');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
